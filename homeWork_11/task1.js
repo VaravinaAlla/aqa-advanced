@@ -1,11 +1,7 @@
 const getPlanetNames = () => {
   const planetPromises = [];
   for (let i = 1; i <= 10; i++) {
-    planetPromises.push(
-      fetch(`https://swapi.dev/api/planets/${i}/`).then((response) =>
-        response.json()
-      )
-    );
+    planetPromises.push(fetch(`https://swapi.dev/api/planets/${i}/`).then((response) => response.json()));
   }
 
   Promise.all(planetPromises)
