@@ -5,4 +5,4 @@
 let length = 21;
 let width = 23;
 let square = length * width;
-console.log(square)
+console.log(square);

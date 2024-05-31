@@ -38,9 +38,7 @@ class Book {
     if (typeof year === "number" && year > 0 && year <= currentYear) {
       this._year = year;
     } else {
-      console.error(
-        `Year must be a positive number not greater than ${currentYear}.`
-      );
+      console.error(`Year must be a positive number not greater than ${currentYear}.`);
     }
   }
 
