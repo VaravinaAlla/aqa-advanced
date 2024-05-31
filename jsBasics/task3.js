@@ -3,7 +3,7 @@
 //Виведіть результат в консоль. Потім використайте шаблонний рядок для створення того ж вітання.
 //Виведіть результат в консоль.
 
-let firstName = 'Elena';
-let secondName = 'Vasiliy';
-console.log('Hello' + ' ' + firstName + ' ' + 'and' + ' ' + secondName)
+let firstName = "Elena";
+let secondName = "Vasiliy";
+console.log("Hello" + " " + firstName + " " + "and" + " " + secondName);
 console.log(`Hello ${firstName} and ${secondName}`);

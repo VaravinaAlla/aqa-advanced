@@ -10,11 +10,7 @@
 виведіть повідомлення "Робота завершена" в консоль, навіть якщо помилка виникла або не виникла. */
 
 function divide(numerator, denominator) {
-  if (
-    denominator === 0 ||
-    typeof numerator !== "number" ||
-    typeof denominator !== "number"
-  ) {
+  if (denominator === 0 || typeof numerator !== "number" || typeof denominator !== "number") {
     throw new Error("The value is not correct");
   }
   return numerator / denominator;

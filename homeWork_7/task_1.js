@@ -7,8 +7,7 @@
 a handleOdd буде виводити текст “number is odd”
 Викличте функцію handleNum і передайте в якості аргументів довільне число і дві функції які ви створили раніше. */
 
-const handleNum = (number, cb_odd, cb_even) =>
-  number % 2 !== 0 ? cb_even() : cb_odd();
+const handleNum = (number, cb_odd, cb_even) => (number % 2 !== 0 ? cb_even() : cb_odd());
 
 const handleEven = () => console.log("Number is even");
 

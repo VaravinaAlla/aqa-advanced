@@ -15,9 +15,7 @@ class Ebook extends Book {
     if (validFormats.includes(fileFormat)) {
       this._fileFormat = fileFormat;
     } else {
-      console.error(
-        `File format must be one of the following: ${validFormats.join(", ")}.`
-      );
+      console.error(`File format must be one of the following: ${validFormats.join(", ")}.`);
     }
   }
 

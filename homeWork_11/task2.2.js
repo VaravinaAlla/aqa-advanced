@@ -5,20 +5,16 @@ const fetchResidentsAllPlanet = async () => {
 
     const planetPromises = film.planets.map((url) => fetch(url));
     const planetResponses = await Promise.all(planetPromises);
-    const planets = await Promise.all(
-      planetResponses.map((response) => response.json())
-    );
+    const planets = await Promise.all(planetResponses.map((response) => response.json()));
 
     const planetResidents = await Promise.all(
       planets.map(async (planet) => {
         const residentPromises = planet.residents.map((url) => fetch(url));
         const residentResponses = await Promise.all(residentPromises);
-        const residents = await Promise.all(
-          residentResponses.map((response) => response.json())
-        );
+        const residents = await Promise.all(residentResponses.map((response) => response.json()));
         const residentNames = residents.map((resident) => resident.name);
         return { planetName: planet.name, residents: residentNames };
-      })
+      }),
     );
 
     console.log(planetResidents);
